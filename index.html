@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Number guessing game</title>
+    <title>Познай числото</title>
 
     <style>
       html {
@@ -24,12 +24,12 @@
   </head>
 
   <body bgcolor="#e2e2e2">
-    <h1>Number guessing game</h1>
+    <h1>Познай числото</h1>
 
     <p>Избрано е число на свободен принцип от 1 до 100. Познай числото с 10 или по-малко опита. Ще ти кажем ако числото е по-голямо или по-малко.</p>
 
     <div class="form">
-      <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+      <label for="guessField">Въведете предположение: </label><input type="text" id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
@@ -57,7 +57,7 @@
         }
         guesses.textContent += userGuess + ' ';
         if(userGuess === randomNumber) {
-          lastResult.textContent = 'Congratulations! You got it right!';
+          lastResult.textContent = 'Браво позна го бебе!';
           lastResult.style.backgroundColor = 'green';
           lowOrHi.textContent = '';
           setGameOver();
@@ -69,9 +69,9 @@
           lastResult.textContent = 'Wrong!';
           lastResult.style.backgroundColor = 'red';
           if(userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!';
+            lowOrHi.textContent = 'Предишното предположение е твърде ниско!';
           } else if(userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!';
+            lowOrHi.textContent = 'Предишното предположение е твърде високо!';
           }
         }
         guessCount++;
